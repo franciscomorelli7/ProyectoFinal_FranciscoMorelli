@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="contenedor"> 
+        <aside>
+            <header>
+                <h1 class="titulo">TIENDA CUERVA</h1>
+            </header>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="./index.html" class="boton-volver botonMenu"><i class="bi bi-arrow-left-square"></i>Volver a comprar</a>
+                    </li>
+                    <li>
+                        <a href="./carrito.html" class="linkCarrito botonMenu"><i class="bi bi-cart"></i>Carrito </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </aside>
+        <main>
+            <h2 class="tituloCarrito">
+                Carrito
+            </h2>
+            <div class="carrito">
+                <p class="textoCarrito" id="carritoVacio">
+                    Aun no agrego nada al carrito
+                </p>
+                <div class="productosCarrito disabled" id="carritoProductos">
+                    
+
+                </div>
+                <div class="accionesCarrito disabled" id="carritoAcciones">
+                    <div class="accionesCarritoIzquierda ">
+                        <button class="accionesCarritoVaciar " id="vaciarCarro">Vaciar carrito</button>
+                    </div>
+                    <div class="accionesCarritoDerecha ">
+                        <div class="accionesCarritoTotal">
+                            <p>Total:</p>
+                            <p id="totalCompra">$</p>
+                            <button class="accionesCarritoComprar ">Finalizar compra</button>
+                        </div>
+                    </div>
+                </div>
+                <p class="agradecimiento disabled" id="carritoCompra">MUCHAS GRACIAS POR COMPRAR EN TIENDA CUERVA</p>
+            </div>
+        </main>
+        <footer>
+            <p class="parrafoFooter">Tienda cuerva 2023</p>
+    
+        </footer>
+    
+    
+    </div> 
+    
+    <script src="./js/carrito.js"></script>
+
+</body>
+</html>
