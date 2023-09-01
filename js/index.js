@@ -1,93 +1,11 @@
-const productos = [
-    //equipamiento oficial
-    {
-        id: 'equipamiento01',
-        nombre: 'Camiseta titular',
-        imagen: "./assets/img/prenda01.webp",
-        categoria: 'equipamiento',
-        precio:27000,
-    },
-    {
-        id: 'equipamiento02',
-        nombre: 'Camiseta suplente',
-        imagen: "./assets/img/prenda02.png",
-        categoria: 'Equipamiento oficial',
-        precio:23000,
-    },
-    {
-        id: 'equipamiento03',
-        nombre: 'Camiseta titular 2019/2020',
-        imagen: "./assets/img/prenda03.jpg",
-        categoria: 'equipamiento',
-        precio:15000,
-    },
-    {
-        id: 'equipamiento04',
-        nombre: 'Camiseta alternativa',
-        imagen: "./assets/img/prenda04.png",
-        categoria: 'equipamiento',
-        precio:20000,
-    },
-    {
-        id: 'equipamiento05',
-        nombre: 'Short blanco oficial',
-        imagen: "./assets/img/prenda05.jpeg",
-        categoria: 'equipamiento',
-        precio:10000,
-    },
-    {
-        id: 'equipamiento06',
-        nombre: 'Short negro oficial',
-        imagen: "./assets/img/prenda06.png",
-        categoria: 'equipamiento',
-        precio:10000,
-    },
-    //ACCESORIOS   
-    {
-        id: 'accesorio01',
-        nombre: 'Gorra con escudo',
-        imagen: "./assets/img/prenda07.webp",
-        categoria: 'accesorios',
-        precio:2000,
-    },
-    {
-        id: 'accesorio02',
-        nombre: 'Piluso con escudo',
-        imagen: "./assets/img/prenda08.webp",
-        categoria: 'accesorios',
-        precio:3000,
-    },
-    {
-        id: 'accesorio03',
-        nombre: 'Gorro de lana',
-        imagen: "./assets/img/prenda09.webp",
-        categoria: 'accesorios',
-        precio:2500,
-    },
-    //ABRIGOS
-    {
-        id: 'abrigo01',
-        nombre: 'Camperon Nike Oficial',
-        imagen: "./assets/img/prenda10.jpg",
-        categoria: 'abrigos',
-        precio:50000,
-    },
-    {
-        id: 'abrigo02',
-        nombre: 'Campera Nike de entrenamiento',
-        imagen: "./assets/img/prenda11.webp",
-        categoria: 'abrigos',
-        precio:30000,
-    },
-    {
-        id: 'abrigo03',
-        nombre: 'Campera nike negra',
-        imagen: "./assets/img/prenda12.jpg",
-        categoria: 'abrigos',
-        precio:20000,
-    }
-        
-]
+let productos = [];
+
+fetch("./js/productos.json")
+    .then(response => response.json())
+    .then(data => {
+        productos = data;
+        cargarProductos(productos);
+    })
 
 const contenedorProductos = document.querySelector("#principal");
 const claseBotones = document.querySelectorAll(".botonNav");
@@ -116,7 +34,7 @@ function cargarProductos (productosElegidos){
         })
  habilitarAgregar()
 }
-cargarProductos(productos)
+
 claseBotones.forEach(boton => {
     boton.addEventListener("click", (b)=>{
         if(b.currentTarget.id != 'todos'){
@@ -150,6 +68,18 @@ if(productosEnCarritoLS){
 
 
 function agregarCarrito(e){
+    Toastify({
+        text: "Producto agregado",
+        duration: 3000,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(to right, #03045e, #ab2a3e)",
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
     const idBoton= e.currentTarget.id;
     const productoAgregado = productos.find (producto => producto.id === idBoton);
 

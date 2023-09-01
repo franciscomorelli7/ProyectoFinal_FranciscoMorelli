@@ -1,0 +1,88 @@
+[
+    {
+        "id": "equipamiento01",
+        "nombre": "Camiseta titular",
+        "imagen": "./assets/img/prenda01.webp",
+        "categoria": "equipamiento",
+        "precio":27000
+    },
+    {
+        "id": "equipamiento02",
+        "nombre": "Camiseta suplente",
+        "imagen": "./assets/img/prenda02.png",
+        "categoria": "Equipamiento oficial",
+        "precio":23000
+    },
+    {
+        "id": "equipamiento03",
+        "nombre": "Camiseta titular 2019/2020",
+        "imagen": "./assets/img/prenda03.jpg",
+        "categoria": "equipamiento",
+        "precio":15000
+    },
+    {
+        "id": "equipamiento04",
+        "nombre": "Camiseta alternativa",
+        "imagen": "./assets/img/prenda04.png",
+        "categoria": "equipamiento",
+        "precio":20000
+    },
+    {
+        "id": "equipamiento05",
+        "nombre": "Short blanco oficial",
+        "imagen": "./assets/img/prenda05.jpeg",
+        "categoria": "equipamiento",
+        "precio":10000
+    },
+    {
+        "id": "equipamiento06",
+        "nombre": "Short negro oficial",
+        "imagen": "./assets/img/prenda06.png",
+        "categoria": "equipamiento",
+        "precio":10000
+    },
+     
+    {
+        "id": "accesorio01",
+        "nombre": "Gorra con escudo",
+        "imagen": "./assets/img/prenda07.webp",
+        "categoria": "accesorios",
+        "precio":2000
+    },
+    {
+        "id": "accesorio02",
+        "nombre": "Piluso con escudo",
+        "imagen": "./assets/img/prenda08.webp",
+        "categoria": "accesorios",
+        "precio":3000
+    },
+    {
+        "id": "accesorio03",
+        "nombre": "Gorro de lana",
+        "imagen": "./assets/img/prenda09.webp",
+        "categoria": "accesorios",
+        "precio":2500
+    },
+    
+    {
+        "id": "abrigo01",
+        "nombre": "Camperon Nike Oficial",
+        "imagen": "./assets/img/prenda10.jpg",
+        "categoria": "abrigos",
+        "precio":50000
+    },
+    {
+        "id": "abrigo02",
+        "nombre": "Campera Nike de entrenamiento",
+        "imagen": "./assets/img/prenda11.webp",
+        "categoria": "abrigos",
+        "precio":30000
+    },
+    {
+        "id": "abrigo03",
+        "nombre": "Campera nike negra",
+        "imagen": "./assets/img/prenda12.jpg",
+        "categoria": "abrigos",
+        "precio":20000
+    }
+]
