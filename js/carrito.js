@@ -7,6 +7,7 @@ const carritoCompra = document.querySelector("#carritoCompra")
 let botonEliminar = document.querySelectorAll(".carritoProductoBorrar")
 const accionVaciar = document.querySelector("#vaciarCarro")
 const contenedorTotal = document.querySelector("#totalCompra")
+const comprar = document.querySelector("#finalizarCompra")
 
 
 function cargarProductosCarrito(){
@@ -92,3 +93,15 @@ function actualizarTotal(){
     const totalCalculado = productosEnCarrito.reduce((acc, producto)=> acc +(producto.precio * producto.cantidad),0)
     contenedorTotal.innerText = `$${totalCalculado}`;
 }
+
+comprar.addEventListener("click", comprarCarrito);
+function comprarCarrito(){
+    productosEnCarrito.length =0;
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+    
+    carritoVacio.classList.add("disabled");
+    carritoProductos.classList.add("disabled");
+    carritoAcciones.classList.add("disabled");
+    carritoCompra.classList.remove("disabled");
+}
+        
